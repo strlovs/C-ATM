@@ -1,6 +1,6 @@
 # Projeto C-ATM - Simulador de Caixa Eletrônico
 
-Este projeto simula o funcionamento de um caixa eletrônico (ATM) usando a linguagem C, com foco em **segurança de software** e **boas práticas DevSecOps**. Desenvolvido como trabalho acadêmico, o projeto segue uma estrutura modular e segura, com autenticação robusta, controle de transações e testes automatizados.
+Este projeto simula o funcionamento de um caixa eletrônico (ATM) usando a linguagem C, com atenção em **segurança de software** e **boas práticas de Desenvolvimento**. Desenvolvido como trabalho acadêmico, o projeto segue uma estrutura modular e segura, com autenticação robusta, controle de transações e testes automatizados.
 
 ## 📁 Estrutura do Projeto
 
