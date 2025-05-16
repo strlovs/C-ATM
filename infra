@@ -1,25 +1,73 @@
 C-ATM_project/
 │
 ├── src/
-│   ├── main.c
-│   ├── ui/
-│   │   ├── ui.c
-│   │   └── ui.h
-│   ├── services/
-│   │   ├── atm_service.c
-│   │   └── atm_service.h
-│   ├── data/
-│   │   ├── account_data.c
-│   │   └── account_data.h
-│   └── common/
-│       ├── account.h
-│       └── utils.h
+│   ├── main.c                  # Função principal que inicializa o sistema
+│   ├── ui/                     # Componentes de Interface Gráfica (UI)
+│   │   ├── main_window.c       # Tela principal do ATM (contém a janela principal)
+│   │   ├── main_window.h       # Cabeçalho da tela principal
+│   │   ├── balance_ui.c        # Tela de exibição de saldo
+│   │   ├── balance_ui.h        # Cabeçalho da tela de exibição de saldo
+│   │   ├── withdraw_ui.c       # Tela de saque
+│   │   ├── withdraw_ui.h       # Cabeçalho da tela de saque
+│   │   ├── transaction_ui.c    # Tela de transações
+│   │   └── transaction_ui.h    # Cabeçalho da tela de transações
+│   │
+│   ├── services/               # Lógica de serviços (transações, verificação de conta, etc.)
+│   │   ├── atm_service.c       # Lógica geral do ATM (saque, consulta, etc.)
+│   │   ├── atm_service.h       # Cabeçalho da lógica geral
+│   │   ├── atm_withdraw.c      # Lógica específica de saque
+│   │   ├── atm_withdraw.h      # Cabeçalho de saque
+│   │   ├── atm_deposit.c       # Lógica específica de depósito
+│   │   ├── atm_deposit.h       # Cabeçalho de depósito
+│   │   └── atm_account.c       # Lógica de verificação de conta (validar PIN, etc.)
+│   │
+│   ├── data/                   # Dados do sistema (contas, transações)
+│   │   ├── account_data.c      # Manipulação dos dados das contas
+│   │   ├── account_data.h      # Cabeçalho dos dados das contas
+│   │   └── accounts.json       # Arquivo de dados das contas (agora em formato JSON)
+│   │
+│   ├── common/                 # Funções e definições comuns
+│   │   ├── account.h           # Estrutura de dados de conta
+│   │   └── utils.h             # Funções utilitárias (como formatação, conversão)
+│   │
+├── data/                       # Diretório de dados (base de dados)
+│   └── accounts.json           # Arquivo JSON simulando base de dados
 │
-├── data/
-│   └── accounts.txt  (arquivo simulando base de dados)
+├── build/                      # Arquivos de compilação
 │
-├── build/
-│   └── (arquivos de compilação gerados aqui)
+├── tests/                      # Testes do sistema
+│   ├── test_atm_service.c      # Testes para a lógica do ATM
+│   ├── test_atm_withdraw.c     # Testes para a lógica de saque
+│   └── test_account_data.c     # Testes para a manipulação dos dados das contas
 │
-├──
-└── README.md
+├── docs/                       # Documentação do projeto
+│   └── architecture.md         # Arquitetura do sistema
+│
+└── README.md                   # Arquivo README com instruções do projeto
+
+
+
+
+POSSIVEL UTILIZAÇÃO DE GIMP TOOL KIT (GTK)  
+
+*Por quê?*
+
+Usa C nativamente (sem bindings complicados).
+
+Fácil de criar telas com botões, campos de texto, labels – exatamente o que um ATM precisa.
+
+Multiplataforma (Linux, Windows com um pouco mais de configuração).
+
+Grande comunidade, muita documentação.
+
+Não é voltado para jogos ou gráficos complexos, então é mais leve e focado em UI de aplicações.
+
+*Podendo simular*
+
+Tela inicial com botão "Inserir cartão".
+
+Tela de digitação de PIN (com botão numérico).
+
+Menu com opções: Saldo, Saque, Depósito, Sair.
+
+Caixa de texto simulando o visor do ATM.
