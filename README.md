@@ -1,54 +1,44 @@
+# Projeto C-ATM - Simulador de Caixa Eletrônico
 
-### Projeto C-ATM
-Este projeto simula o funcionamento de um Caixa Eletrônico (ATM) usando a linguagem de programação C. O sistema permite que o usuário interaja com o caixa eletrônico para realizar operações como consultar saldo, realizar saques, realizar depósitos, alterar o PIN e verificar extratos de transações. O projeto foi estruturado de forma modular, facilitando a manutenção e evolução do sistema. Proposto pelo professor Geovane Oliveira no UNICEPLAC - Centro Universitário do Planalto Central Apparecido dos Santos
+Este projeto simula o funcionamento de um caixa eletrônico (ATM) usando a linguagem C, com foco em **segurança de software** e **boas práticas DevSecOps**. Desenvolvido como trabalho acadêmico, o projeto segue uma estrutura modular e segura, com autenticação robusta, controle de transações e testes automatizados.
 
-## Funcionalidades
-Login com cartão e PIN: O usuário insere seu cartão e PIN para autenticar a conta.
+## 📁 Estrutura do Projeto
 
-Consulta de saldo: Exibe o saldo atual da conta.
+```
+C-ATM/
+├── data/              # Dados simulados e logs
+├── include/           # Headers (.h)
+├── src/               # Implementações (.c)
+├── tests/             # Testes unitários
+├── docs/              # Documentação técnica
+├── Makefile           # Compilação automatizada
+└── README.md
+```
 
-Saque: Permite o saque de um valor da conta, verificando se o saldo é suficiente.
+## ⚙️ Funcionalidades
 
-Depósito: Permite o depósito de um valor na conta.
+- Login com autenticação por cartão e PIN
+- Saque e depósito com atualização em JSON
+- Alteração de PIN
+- Consulta de saldo
+- Extrato de transações
+- Registro de logs para auditoria
+- Mensagens de erro para entradas inválidas ou saldo insuficiente
 
-Alteração de PIN: Permite a alteração do PIN do usuário.
+## 🔐 Cuidados com a Segurança
 
-Extrato de transações: Exibe um extrato das transações realizadas na conta.
+- PINs armazenados com **hash seguro** (SHA-256)
+- Entradas validadas contra **injeções e buffer overflows**
+- Arquivos de dados com **permissões restritas**
+- Logs de transações para **auditoria**
+- **Bloqueio** após múltiplas tentativas de autenticação
 
-Tela de erro: Mensagens de erro para situações como saldo insuficiente ou PIN incorreto.
+## 🧪 Testes
 
-
-## Estrutura de Dados
-Os dados do sistema, como contas de usuários, são armazenados no arquivo accounts.json na pasta data/. O arquivo pode ser editado manualmente para adicionar ou modificar contas.
-
-## Exemplos de Contas
-O arquivo accounts.json pode conter um formato simples como este:
-
-  {
-    "account_number": "123456789",
-    "pin": "1234",
-    "balance": 1000.50
-  },
-  {
-    "account_number": "987654321",
-    "pin": "5678",
-    "balance": 500.75
-  }
-]
-
-## Testes
-O projeto inclui testes automatizados para a lógica de negócios, que podem ser encontrados na pasta tests/. Para rodá-los, basta compilar e executar os testes específicos.
-
-## Arquitetura
-O projeto segue uma arquitetura modular, dividida em componentes responsáveis pelas diferentes partes do sistema. Abaixo estão os principais diretórios e seus objetivos:
-
-src/ui: Contém os arquivos responsáveis pela interface de usuário, como as telas de saldo, saque, transações, etc.
-
-src/services: Contém a lógica de serviço do ATM, como as operações de saque, depósito, e verificação de contas.
-
-src/data: Contém a lógica de manipulação de dados, como a leitura e escrita no arquivo accounts.json.
-
-src/common: Contém funções e definições auxiliares compartilhadas em todo o sistema.
+- Testes unitários com `assert.h`
+- Testes de borda (entradas inválidas)
+- Testes de integração por etapa
+- Suporte para ferramentas como Valgrind e AddressSanitizer
 
 
-
+Para detalhes de implementação, veja os arquivos `docs/arquitetura.md` e `docs/roadmap.md`.
