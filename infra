@@ -1,0 +1,25 @@
+C-ATM_project/
+│
+├── src/
+│   ├── main.c
+│   ├── ui/
+│   │   ├── ui.c
+│   │   └── ui.h
+│   ├── services/
+│   │   ├── atm_service.c
+│   │   └── atm_service.h
+│   ├── data/
+│   │   ├── account_data.c
+│   │   └── account_data.h
+│   └── common/
+│       ├── account.h
+│       └── utils.h
+│
+├── data/
+│   └── accounts.txt  (arquivo simulando base de dados)
+│
+├── build/
+│   └── (arquivos de compilação gerados aqui)
+│
+├──
+└── README.md
