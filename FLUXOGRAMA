@@ -23,10 +23,12 @@ Início
 |  - Consultar saldo              |    +-------------------------+
 |  - Realizar saque               |                |
 |  - Realizar depósito            |                v
+|  - Alterar PIN                  |         +----------------------+
+|  - Extrato de transações        |         |  O usuário tenta de novo|
 |  - Sair                          |         +----------------------+
-+----------------------------------+         |  O usuário tenta de novo|
-  |                                       +----------------------+
-  | (Usuário escolhe uma opção)                 |
++----------------------------------+                |
+  |                                       v
+  | (Usuário escolhe uma opção)               |
   v                                             v
 +------------------------------+        +------------------------------+
 | O usuário escolhe "Consultar |        |  O usuário escolhe "Saque"   |
@@ -87,3 +89,107 @@ Início
                | Sistema finaliza a operação |
                | e retorna à tela inicial   |
                +----------------------------+
+
+                                    (Outra opção: Depósito)
+
+                     +-----------------------------+
+                     | O usuário escolhe "Depósito"|
+                     +-----------------------------+
+                               |
+                               v
+                    +------------------------------+
+                    | O usuário insere o valor do  |
+                    | depósito (quantia a ser     |
+                    | depositada)                 |
+                    +------------------------------+
+                               |
+                               v
+                    +-------------------------------+
+                    | Sistema valida o depósito      |
+                    | (verifica a conta e o valor)  |
+                    +-------------------------------+
+                               |
+                               v
+                    +-------------------------------+
+                    | Depósito realizado com sucesso |
+                    | e saldo atualizado            |
+                    +-------------------------------+
+                               |
+                               v
+                    +------------------------------+
+                    | Exibe novo saldo e opções    |
+                    +------------------------------+
+                               |
+                               v
+                    +--------------------------+
+                    |  O usuário escolhe "Sair"  |
+                    +--------------------------+
+                               |
+                               v
+                    +----------------------------+
+                    | Sistema finaliza a operação |
+                    | e retorna à tela inicial   |
+                    +----------------------------+
+
+                        (Outra opção: Alterar PIN)
+
+                     +-------------------------------+
+                     | O usuário escolhe "Alterar PIN"|
+                     +-------------------------------+
+                               |
+                               v
+                    +-------------------------------+
+                    | O usuário insere o novo PIN   |
+                    +-------------------------------+
+                               |
+                               v
+                    +-------------------------------+
+                    | Sistema valida o PIN atual e  |
+                    | altera para o novo PIN        |
+                    +-------------------------------+
+                               |
+                               v
+                    +-------------------------------+
+                    | Alteração de PIN realizada    |
+                    | com sucesso                   |
+                    +-------------------------------+
+                               |
+                               v
+                    +-------------------------------+
+                    | Exibe mensagem de sucesso e   |
+                    | opções para novas ações       |
+                    +-------------------------------+
+                               |
+                               v
+                    +--------------------------+
+                    |  O usuário escolhe "Sair"  |
+                    +--------------------------+
+                               |
+                               v
+                    +----------------------------+
+                    | Sistema finaliza a operação |
+                    | e retorna à tela inicial   |
+                    +----------------------------+
+
+                       (Outra opção: Extrato de Transações)
+
+                     +-------------------------------+
+                     | O usuário escolhe "Extrato"  |
+                     +-------------------------------+
+                               |
+                               v
+                    +-------------------------------+
+                    | Sistema exibe as transações  |
+                    | anteriores (saques, depósitos)|
+                    +-------------------------------+
+                               |
+                               v
+                    +-------------------------------+
+                    | O usuário escolhe "Sair"     |
+                    +-------------------------------+
+                               |
+                               v
+                    +-------------------------------+
+                    | Sistema finaliza a operação  |
+                    | e retorna à tela inicial     |
+                    +-------------------------------+
