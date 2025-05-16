@@ -1,0 +1,89 @@
+Início
+  |
+  v
++-------------------------------+
+|  O usuário insere o cartão    |
++-------------------------------+
+  |
+  v
++-------------------------------+
+|  O usuário insere o PIN       |
++-------------------------------+
+  |
+  v
++----------------------------------+
+|  O sistema valida o PIN         |<---+
++----------------------------------+    |
+  |                                     |
+  | Se PIN correto:                     | Se PIN incorreto:
+  v                                     v
++----------------------------------+    +-------------------------+
+|  Tela Principal é exibida       |    |  Tela de erro (PIN)     |
+|  com as opções:                 |    |  O usuário tenta de novo |
+|  - Consultar saldo              |    +-------------------------+
+|  - Realizar saque               |                |
+|  - Realizar depósito            |                v
+|  - Sair                          |         +----------------------+
++----------------------------------+         |  O usuário tenta de novo|
+  |                                       +----------------------+
+  | (Usuário escolhe uma opção)                 |
+  v                                             v
++------------------------------+        +------------------------------+
+| O usuário escolhe "Consultar |        |  O usuário escolhe "Saque"   |
+| Saldo"                       |        +------------------------------+
++------------------------------+                  |
+  |                                              v
+  v                                  +-------------------------------+
++------------------------------+     |  O usuário escolhe o valor do |
+|  Sistema exibe o saldo atual |     |  saque (quantia a ser retirada)|
++------------------------------+     +-------------------------------+
+  |                                      |
+  v                                      v
++------------------------------+     +-----------------------------------+
+| O usuário escolhe "Sair"     |     | Sistema valida o saldo e o valor |
++------------------------------+     |  do saque                       |
+                                         +-----------------------------------+
+                                          |
+                                          v
+                                  +-------------------------------+
+                                  | O saldo é suficiente?         |
+                                  +-------------------------------+
+                                          |
+                      +-------------------+---------------------+
+                      |                                         |
+              Se sim: Continua com o saque                Se não: Exibe mensagem de erro
+                      |                                         |
+                      v                                         v
+            +-------------------------+                   +------------------------+
+            | Sistema realiza o saque  |                   | Tela de erro (saldo    |
+            | e atualiza o saldo       |                   | insuficiente)          |
+            +-------------------------+                   +------------------------+
+                      |                                         |
+                      v                                         v
+            +-------------------------+                     +--------------------------+
+            | Exibe novo saldo         |                     |  O usuário retorna para  |
+            | e opção de novas ações   |                     |  a tela principal        |
+            +-------------------------+                     +--------------------------+
+                      |
+                      v
+             +------------------------+
+             |  O usuário escolhe      |
+             |  "Consultar Saldo" novamente |
+             +------------------------+
+                      |
+                      v
+             +------------------------+
+             | Sistema exibe o saldo   |
+             | atual novamente         |
+             +------------------------+
+                      |
+                      v
+              +--------------------------+
+              | O usuário escolhe "Sair"  |
+              +--------------------------+
+                      |
+                      v
+               +----------------------------+
+               | Sistema finaliza a operação |
+               | e retorna à tela inicial   |
+               +----------------------------+
