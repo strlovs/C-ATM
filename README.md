@@ -1,8 +1,8 @@
 
-Projeto C-ATM
+### Projeto C-ATM
 Este projeto simula o funcionamento de um Caixa Eletrônico (ATM) usando a linguagem de programação C. O sistema permite que o usuário interaja com o caixa eletrônico para realizar operações como consultar saldo, realizar saques, realizar depósitos, alterar o PIN e verificar extratos de transações. O projeto foi estruturado de forma modular, facilitando a manutenção e evolução do sistema. Proposto pelo professor Geovane Oliveira no UNICEPLAC - Centro Universitário do Planalto Central Apparecido dos Santos
 
-Funcionalidades
+## Funcionalidades
 Login com cartão e PIN: O usuário insere seu cartão e PIN para autenticar a conta.
 
 Consulta de saldo: Exibe o saldo atual da conta.
@@ -36,10 +36,10 @@ O arquivo accounts.json pode conter um formato simples como este:
   }
 ]
 
-Testes
+## Testes
 O projeto inclui testes automatizados para a lógica de negócios, que podem ser encontrados na pasta tests/. Para rodá-los, basta compilar e executar os testes específicos.
 
-Arquitetura
+## Arquitetura
 O projeto segue uma arquitetura modular, dividida em componentes responsáveis pelas diferentes partes do sistema. Abaixo estão os principais diretórios e seus objetivos:
 
 src/ui: Contém os arquivos responsáveis pela interface de usuário, como as telas de saldo, saque, transações, etc.
